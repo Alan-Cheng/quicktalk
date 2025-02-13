@@ -212,7 +212,7 @@
           messageDiv.innerHTML = `<strong>${data.username}:</strong> ${
             data.message
           } 
-                                <div class="timestamp">${new Date().toLocaleTimeString()}</div>`;
+                                <div class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</div>`;
 
           messagesDiv.appendChild(messageDiv);
           messagesDiv.scrollTop = messagesDiv.scrollHeight;
